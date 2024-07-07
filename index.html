@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #greenButton {
+        background-color: greenyellow;
+        border-radius: 10px;
+        padding: 5px 10px;
+        font-size: 20px;
+        border: 1px solid black;
+        text-transform: uppercase;
+      }
+      #lightbutton {
+        border-radius: 10px;
+        padding: 5px 30px;
+        font-size: 20px;
+        border: 2px solid black;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <button
+      id="greenButton"
+      onclick="cartValue++; document.querySelector(
+      '#heading'
+    ).innerHTML = `Your bag has ${cartValue} item`;"
+    >
+      Add to Bag
+    </button>
+    <button
+      id="lightbutton"
+      onclick="cartValue--; document.querySelector(
+      '#heading'
+    ).innerHTML = `Your bag has ${cartValue} item`;"
+    >
+      Move to Wishlist
+    </button>
+    <button
+      id="greenButton"
+      onclick="cartValue+=2; document.querySelector(
+      '#heading'
+    ).innerHTML = `Your bag has ${cartValue} item`;"
+    >
+      Add 1+1 sale items
+    </button>
+    <button
+      id="greenButton"
+      onclick="cartValue=0; document.querySelector(
+      '#heading'
+    ).innerHTML = `Your bag has ${cartValue} item`;"
+    >
+      Empty cart
+    </button>
+    <h1 id="heading"></h1>
+    <script>
+      let cartValue = 0;
+      document.querySelector(
+        "#heading"
+      ).innerHTML = `Your bag has ${cartValue} item`;
+    </script>
+  </body>
+</html>
